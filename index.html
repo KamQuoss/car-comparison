@@ -29,8 +29,7 @@
                     <hr>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet unde cum tenetur, quisquam facere
                         nulla accusamus animi eaque nisi commodi distinctio? Distinctio delectus alias dolores debitis
-                        fuga ex non quod.
-                        Quo odit, corrupti debitis similique officia quia. Distinctio vitae assumenda doloremque?</p>
+                        fuga ex non quod.</p>
                     <hr>
                     <h3>average fuel consumption</h3>
                     <p>11 l/100 km</p>
@@ -50,8 +49,7 @@
                     <hr>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet unde cum tenetur, quisquam facere
                         nulla accusamus animi eaque nisi commodi distinctio? Distinctio delectus alias dolores debitis
-                        fuga ex non quod.
-                        Quo odit, corrupti debitis similique officia quia. Distinctio vitae assumenda doloremque?</p>
+                        fuga ex non quod.</p>
                     <hr>
                     <h3>average fuel consumption</h3>
                     <p>13 l/100 km</p>
@@ -59,16 +57,19 @@
             </div>
         </section>
         <section class="calculator">
-            <h1>Długość trasy w mieście</h1>
-            <p>Total km: <span id="city-km"></span></p>
+            <h1>City distance</h1>
+            <p>Total: <span id="city-km"></span> km</p>
             <input type="range" id="city-range" name="city-range" min="0" max="900" value="400" step="50">
-            <label for="city-range">km</label>
-            <h1>Długość trasy w trasie</h1>
-            <p>Total km: <span id="road-km"></span></p>
+            <h1>Country distance</h1>
+            <p>Total: <span id="road-km"></span> km</p>
             <input type="range" id="road-range" name="road-range" min="0" max="1500" value="600" step="50">
-            <label for="road-range">km</label>
-            <h3>cost-effectiveness</h3>
+            <h1>Fuel cost</h1>            
+            <input type="number" id="fuel-price" name="fuel-price" min="0" max="2.50" step=".01" value="1.30">
+            <label for="fuel-price">€</label>
+            <h1>Cost-effectiveness</h1>
             <div class="effectiveness"></div>
+            <h1>Cost difference</h1>
+            <p><span class="cost-difference"></span></p>
         </section>
     </main>
     <footer>

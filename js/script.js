@@ -19,7 +19,10 @@ let
     combustionCarRoadComb = 5 / 100, // l/km
     hybridCarCityComb = 4 / 100, // l/km
     hybridCarRoadComb = 7 / 100; // l/km
-    effectiveness = document.querySelector('.effectiveness')
+    effectiveness = document.querySelector('.effectiveness'),
+    fuelPrice = document.querySelector('#fuel-price'),
+    fuelPriceValue = fuelPrice.value,
+    costDifference = document.querySelector('.cost-difference')
 
 
 setValue = (value, valueContainer) => {
@@ -27,17 +30,24 @@ setValue = (value, valueContainer) => {
 }
 
 combustionCarCost = () => {
-    return (cityValue * combustionCarCityComb) + (roadValue * combustionCarRoadComb)
+    return ( (cityValue * combustionCarCityComb) + (roadValue * combustionCarRoadComb) ) * fuelPriceValue
 }
 
 hybridCarCost = () => {
-    return (cityValue * hybridCarCityComb) + (roadValue * hybridCarRoadComb)
+    return ( (cityValue * hybridCarCityComb) + (roadValue * hybridCarRoadComb) ) * fuelPriceValue
 }
 
 checkCost = () => {
-    ( combustionCarCost() > hybridCarCost() ) ? 
-    effectiveness.innerHTML = 'hybrid car' :
-    effectiveness.innerHTML = 'combustion car'
+    if ( combustionCarCost() > hybridCarCost() ) {
+        effectiveness.innerHTML = 'hybrid car';
+        let difference = Number(combustionCarCost() - hybridCarCost()).toFixed(2); 
+        costDifference.innerHTML = `${difference} €`
+    }
+    else {
+        effectiveness.innerHTML = 'combustion car';
+        let difference = Number(hybridCarCost() - combustionCarCost()).toFixed(2); 
+        costDifference.innerHTML = `${difference} €`
+    }
 }
 
 init = () => {
@@ -52,8 +62,12 @@ cityRange.addEventListener('change', (e) => {
     checkCost()
 })
 roadRange.addEventListener('change', (e) => {
-    roadValue = e.target.value
+    roadValue = e.target.value;
     setValue(roadValue, roadKm);
+    checkCost()
+})
+fuelPrice.addEventListener('change', (e) => {
+    fuelPriceValue = e.target.value;
     checkCost()
 })
 
