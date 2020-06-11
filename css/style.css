@@ -1,0 +1,38 @@
+:root {
+    --color-grey: #9c9a9a;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1040px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cars {
+    display: flex;
+}
+
+.car-card {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px #eee;
+    margin: 0.6rem 1.2rem;
+    max-width: 300px;
+}
+
+.car-card h3 {
+    color: var(--color-grey);
+    text-transform: uppercase;
+}
+
+.cars-content {
+    padding: 0 1rem;
+}

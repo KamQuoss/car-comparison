@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title> </title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Hybrid and combustion car comparision</h1>
+    </header>
+    <main>
+        <section class="cars">
+            <div class="car-card hybrid-car">
+                <div class="img-container">
+                    <img src="img/wolfgang-rottmann-HaKQxt2SXCM-unsplash.jpg"
+                        alt="Photo by Wolfgang Rottmann on Unsplash">
+                </div>
+                <div class="cars-content">
+                    <h3>vehicle</h3>
+                    <p>hybrid car</p>
+                    <hr>
+                    <h3>price</h3>
+                    <p>25&nbsp;000 €</p>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet unde cum tenetur, quisquam facere
+                        nulla accusamus animi eaque nisi commodi distinctio? Distinctio delectus alias dolores debitis
+                        fuga ex non quod.
+                        Quo odit, corrupti debitis similique officia quia. Distinctio vitae assumenda doloremque?</p>
+                    <hr>
+                    <h3>average fuel consumption</h3>
+                    <p>11 l/100 km</p>
+                </div>
+            </div>
+            <div class="car-card combustion-car">
+                <div class="img-container">
+                    <img src="img/wolfgang-rottmann-HaKQxt2SXCM-unsplash.jpg"
+                        alt="Photo by Wolfgang Rottmann on Unsplash">
+                </div>
+                <div class="cars-content">
+                    <h3>vehicle</h3>
+                    <p>combustion car</p>
+                    <hr>
+                    <h3>price</h3>
+                    <p>25&nbsp;000 €</p>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet unde cum tenetur, quisquam facere
+                        nulla accusamus animi eaque nisi commodi distinctio? Distinctio delectus alias dolores debitis
+                        fuga ex non quod.
+                        Quo odit, corrupti debitis similique officia quia. Distinctio vitae assumenda doloremque?</p>
+                    <hr>
+                    <h3>average fuel consumption</h3>
+                    <p>13 l/100 km</p>
+                </div>
+            </div>
+        </section>
+        <section class="calculator">
+            <h1>Długość trasy w mieście</h1>
+            <p>Total km: <span id="city-km"></span></p>
+            <input type="range" id="city-range" name="city-range" min="0" max="900" value="400" step="50">
+            <label for="city-range">km</label>
+            <h1>Długość trasy w trasie</h1>
+            <p>Total km: <span id="road-km"></span></p>
+            <input type="range" id="road-range" name="road-range" min="0" max="1500" value="600" step="50">
+            <label for="road-range">km</label>
+            <h3>cost-effectiveness</h3>
+            <div class="effectiveness"></div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
