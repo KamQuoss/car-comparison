@@ -15,7 +15,7 @@
     </header>
     <main>
         <section class="cars">
-            <div class="car-card hybrid-car">
+            <div class="car-card border">
                 <div class="img-container">
                     <img src="img/wolfgang-rottmann-HaKQxt2SXCM-unsplash.jpg"
                         alt="Photo by Wolfgang Rottmann on Unsplash">
@@ -35,7 +35,7 @@
                     <p>11 l/100 km</p>
                 </div>
             </div>
-            <div class="car-card combustion-car">
+            <div class="car-card border">
                 <div class="img-container">
                     <img src="img/wolfgang-rottmann-HaKQxt2SXCM-unsplash.jpg"
                         alt="Photo by Wolfgang Rottmann on Unsplash">
@@ -56,20 +56,21 @@
                 </div>
             </div>
         </section>
-        <section class="calculator">
-            <h1>City distance</h1>
-            <p>Total: <span id="city-km"></span> km</p>
+        <section class="calculator border">
+            <h2>City distance</h2>
             <input type="range" id="city-range" name="city-range" min="0" max="900" value="400" step="50">
-            <h1>Country distance</h1>
+            <p>Total: <span id="city-km"></span> km</p>
+            <h2>Country distance</h2>
+            <input type="range" id="road-range" name="road-range" min="0" max="1500" value="800" step="50">
             <p>Total: <span id="road-km"></span> km</p>
-            <input type="range" id="road-range" name="road-range" min="0" max="1500" value="600" step="50">
-            <h1>Fuel cost</h1>            
+            <h2>Fuel cost</h2>            
             <input type="number" id="fuel-price" name="fuel-price" min="0" max="2.50" step=".01" value="1.30">
             <label for="fuel-price">€</label>
-            <h1>Cost-effectiveness</h1>
-            <div class="effectiveness"></div>
-            <h1>Cost difference</h1>
-            <p><span class="cost-difference"></span></p>
+            <hr>
+            <h2>Cost-effectiveness</h2>
+            <div class="effectiveness outcome"></div>
+            <h2>Cost difference</h2>
+            <div class="cost-difference outcome"></div>
         </section>
     </main>
     <footer>

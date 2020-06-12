@@ -6,8 +6,10 @@
     --color-black: #0D0D0D;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: var(--color-black)
 }
 
@@ -22,9 +24,43 @@ header {
 
 main {
     margin: 0 auto;
-    max-width: 1040px;
+    max-width: 1100px;
     display: flex;
     justify-content: space-between;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-grey);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-grey);
+    text-align: center;
+    margin: 1.3rem 0 0.8rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--color-grey);
+    margin: 1.1rem 0 .8rem 0;
+}
+
+p {
+    margin: .8rem 0;
+}
+
+.border {
+    border: 1px solid var(--color-sand);
+    box-shadow: 0px 0px 8px rgba(190, 140, 111, 0.5);
+    margin: 0rem 0.8rem;
 }
 
 /* cars section */
@@ -36,15 +72,6 @@ main {
 
 .car-card {
     width: calc(50% - 1.6rem);
-    border: 1px solid var(--color-sand);
-    box-shadow: 0px 0px 8px rgba(190, 140, 111, 0.5);
-    margin: 0rem 0.8rem;
-}
-
-.car-card h3 {
-    color: var(--color-grey);
-    text-transform: uppercase;
-    font-size: 1.1rem;
 }
 
 .cars-content {
@@ -55,33 +82,60 @@ hr {
     border-top: 1px solid var(--color-sand);
 }
 
-/* comartison section */
+/* comparison section */
 
-.calculator{
+.calculator {
     flex-basis: 35%;
+    text-align: center;
     padding: 0 1rem;
-    margin: 0rem 0.8rem;
-    border: 1px solid var(--color-sand);
-    box-shadow: 0px 0px 8px rgba(190, 140, 111, 0.5);
 }
 
-input[type="range"] {
+input[type='range'] {
     display: block;
     -webkit-appearance: none;
-    background-color: var(--color-grey);
+    background-color: var(--color-bone);
     width: 100%;
-    height: 3px;
-    border-radius: 3px;
-    margin: 0 auto;
+    height: 0.7rem;
+    border-radius: 0.7rem;
     outline: 0;
+    margin: 1.3rem auto;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     background-color: var(--color-red);
-    width: 1rem;
-    height: 1rem;
+    width: 1.1rem;
+    height: 1.1rem;
     border-radius: 50%;
     cursor: pointer;
-    transition: .3s ease-in-out;
+    transition: .4s ease-in-out;
+}
+
+input[type='number'] {
+    font-size: 1rem;
+    width: 3.5rem;
+    padding: 3px;
+    margin: 0;
+    border: 1px solid var(--color-bone);
+    color: var(--color-red);
+font-weight: 600;
+}
+
+input[type='number']:focus {
+    outline: none;
+}
+
+#city-km, 
+#road-km {
+    color: var(--color-red);
+}
+.outcome {
+    margin: 0 auto 0.8rem auto;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--color-red);
+    text-transform: capitalize;
+    width: 15rem;
+    border: 1.5px solid var(--color-bone);
+    padding: 0.7rem 0.9rem;
 }
