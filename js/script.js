@@ -18,29 +18,20 @@ setValue = (value, valueContainer) => {
     valueContainer.innerHTML = `<b>${value}</b>`
 };
 
-combustionCarCost = () => {
-    return ((cityValue * combustionCarCityComb) + (roadValue * combustionCarRoadComb)) * fuelPriceValue
-};
+combustionCarCost = () => ((cityValue * combustionCarCityComb) + (roadValue * combustionCarRoadComb)) * fuelPriceValue;
 
-hybridCarCost = () => {
-    return ((cityValue * hybridCarCityComb) + (roadValue * hybridCarRoadComb)) * fuelPriceValue
-};
+hybridCarCost = () => ((cityValue * hybridCarCityComb) + (roadValue * hybridCarRoadComb)) * fuelPriceValue;
 
 checkCost = () => {
+    let difference = Math.abs(Number(hybridCarCost() - combustionCarCost())).toFixed(2);
+    costDifference.innerHTML = `${difference} €`
+
     if (combustionCarCost() == hybridCarCost()) {
         effectiveness.innerHTML = 'no difference';
-        let difference = Number(combustionCarCost() - hybridCarCost()).toFixed(2);
-        costDifference.innerHTML = `${difference} €`
-    } 
-    else if (combustionCarCost() > hybridCarCost()) {
+    } else if (combustionCarCost() > hybridCarCost()) {
         effectiveness.innerHTML = 'hybrid car';
-        let difference = Number(combustionCarCost() - hybridCarCost()).toFixed(2);
-        costDifference.innerHTML = `${difference} €`
-    }
-    else {
+    } else {
         effectiveness.innerHTML = 'combustion car';
-        let difference = Number(hybridCarCost() - combustionCarCost()).toFixed(2);
-        costDifference.innerHTML = `${difference} €`
     }
 };
 
